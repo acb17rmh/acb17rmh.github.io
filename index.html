@@ -16,8 +16,10 @@
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-  <!-- Footer CSS -->
+  <!-- Header and Footer CSS -->
+  <link rel="stylesheet" href="stylesheets/header.css">
   <link rel="stylesheet" href="stylesheets/footer.css">
+
 </head>
 
 <body>
@@ -35,8 +37,54 @@
   </header>
   <!--Page content-->
   <div class="container">
-    <h1>Hello world!
+    <h3>Key definitions</h3>
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">Term</th>
+          <th scope="col">Definition</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Semitone</td>
+          <td>The distance from any key to the next key from it (no keys inbetween)</td>
+        </tr>
+        <tr>
+          <td>Whole tone</td>
+          <td>A distance of 2 semitones (1 key inbetween)</td>
+        </tr>
+        <tr>
+          <td>Flat (♭)</td>
+          <td>The note 1 semitone to the left</td>
+        </tr>
+        <tr>
+          <td>Sharp (#)</td>
+          <td>The note 1 semitone to the right</td>
+        </tr>
+        <tr>
+          <td>Chord</td>
+          <td>3 or more keys being pressed at once</td>
+        </tr>
+        <tr>
+          <td>Root note</td>
+          <td>The note on which a chord is based, e.g a C major chord has a root note of C</td>
+        </tr>
+      </tbody>
+    </table>
   </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-sm">
+        <h3>Chords</h3>
+      </div>
+      <div class="col-sm">
+        <h3>Scales</h3>
+      </div>
+    </div>
+  </div>
+
   <!--End of page content-->
 
   <!--Footer-->
