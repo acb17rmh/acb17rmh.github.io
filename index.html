@@ -15,26 +15,41 @@
 
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+  <!-- Footer CSS -->
+  <link rel="stylesheet" href="stylesheets/footer.css">
 </head>
 
 <body>
-  <!--Navigation bar-->
-  <div id="nav-placeholder">
+  <header>
+    <!--Navigation bar-->
+    <div id="nav-placeholder">
+    </div>
 
-  </div>
-
-  <script>
-    $(function(){
-    $("#nav-placeholder").load("navbar.html");
-    });
-  </script>
-  <!--end of Navigation bar-->
-
+    <script>
+      $(function(){
+      $("#nav-placeholder").load("layouts/navbar.html");
+      });
+    </script>
+    <!--end of Navigation bar-->
+  </header>
   <!--Page content-->
-
+  <div class="container">
+    <h1>Hello world!
+  </div>
   <!--End of page content-->
 
   <!--Footer-->
+  <footer class="footer">
+    <div id="footer-placeholder"
+    </div>
+
+    <script>
+      $(function(){
+      $("#footer-placeholder").load("layouts/footer.html");
+      });
+    </script>
+  </footer>
 
   <!--End of footer-->
 <body>
