@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<head>
+
+  <title> Chords | musicApp</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Music theory cheatsheet">
+  <meta name="author" content="Richard Hindes">
+
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+  <!--Scales-Chords API-->
+  <script async type="text/javascript" src="https://www.scales-chords.com/api/scales-chords-api.js"></script>
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+  <!-- Header and Footer CSS -->
+  <link rel="stylesheet" href="stylesheets/header.css">
+  <link rel="stylesheet" href="stylesheets/footer.css">
+
+  <!-- Test script -->
+  <script src="test.js"></script>
+
+</head>
+
+<body>
+  <header>
+    <!--Navigation bar-->
+    <div id="nav-placeholder">
+    </div>
+
+    <script>
+      $(function(){
+      $("#nav-placeholder").load("layouts/navbar.html");
+      });
+    </script>
+    <!--end of Navigation bar-->
+  </header>
+  <!--Page content-->
+  <div class="container">
+    <h2> Diatonic Major Chords </h2>
+    <p> Diatonic chords are chords that occur naturally within a key. What this means
+        is that the notes within these chords are all in their respective scale/key.
+        The primary chords of any key are the I, IV and V diatonic chords. 
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Major Key</th>
+          <th>Diatonic Chords</th>
+        </tr>
+      </thead>
+      <tbody id="tbody">
+      </tbody>
+    </table>
+  </div>
+  <!--End of page content-->
+
+  <!--Footer-->
+  <footer class="footer">
+    <div id="footer-placeholder">
+    </div>
+
+    <script>
+      $(function(){
+      $("#footer-placeholder").load("layouts/footer.html");
+      });
+    </script>
+  </footer>
+
+  <!--End of footer-->
+<body>
