@@ -1,25 +1,3 @@
-function getChordsFromScale(scale) {
-  var chords = [];
-  for (var j = 1; j <= scale.length; j++) {
-    var chord = "";
-    if ((j == 2) || (j == 3) || (j == 6)) {
-      //minor chord
-      chord = scale[j-1] + "m";
-      chords.push(chord);
-    } else if (j == 7) {
-      //diminished chord
-      chord = scale[j-1] + "dim";
-      chords.push(chord);
-    } else {
-      //major chord
-      chord = scale[j-1];
-      chords.push(chord);
-    }
-  }
-  //console.log(chords);
-  return chords;
-}
-
 document.addEventListener('DOMContentLoaded', function() {
   var tbody = document.getElementById('tbody');
 

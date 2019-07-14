@@ -101,3 +101,41 @@ var majorChordProgressions = [
                         [3, 5, 4, 3],
                         [2, 5, 1],
                         ];
+
+function getChordsFromScale(scale) {
+  var chords = [];
+  for (var j = 1; j <= scale.length; j++) {
+    var chord = "";
+    if ((j == 2) || (j == 3) || (j == 6)) {
+      //minor chord
+      chord = scale[j-1] + "m";
+      chords.push(chord);
+    } else if (j == 7) {
+      //diminished chord
+      chord = scale[j-1] + "dim";
+      chords.push(chord);
+    } else {
+      //major chord
+      chord = scale[j-1];
+      chords.push(chord);
+    }
+  }
+  //console.log(chords);
+  return chords;
+}
+
+
+/* given a chord progression in number form, returns that progression
+   in a given key
+
+   @params progression - an array of chord indices
+   @params key - an array of the diatonic chords in that key
+
+*/
+function convertProgToChords(progression, key) {
+  var output = []
+  for (var i = 0; i < progression.length; i++) {
+    output.push(key[progression[i] - 1])
+  }
+  return output;
+}

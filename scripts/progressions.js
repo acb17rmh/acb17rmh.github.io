@@ -1,19 +1,6 @@
-var cMajor = ["C", "Dm", "Em", "F", "G", "Am", "Bdim"];
+var c = ["C", "D", "E", "F", "G", "A", "B"];
+var cMajor = getChordsFromScale(c);
 
-/* given a chord progression in number form, returns that progression
-   in a given key
-
-   @params progression - an array of chord indices
-   @params key - an array of the diatonic chords in that key
-
-*/
-function convertProgToChords(progression, key) {
-  var output = []
-  for (var i = 0; i < progression.length; i++) {
-    output.push(key[progression[i] - 1])
-  }
-  return output;
-}
 
 /* loops through the chord progressions specified in the file
    initialise.js and outputs them in the given key in an HTML table */
@@ -24,5 +11,18 @@ document.addEventListener('DOMContentLoaded', function() {
     var output = convertProgToChords(majorChordProgressions[i], cMajor)
     tr += "<td>" + cMajor[0] + "<td>" + "<td>" + output.join(", ") + "</td><tr>";
     tbody.innerHTML += tr;
+    }
+}, false);
+
+document.addEventListener('DOMContentLoaded', function() {
+  var dropdown = document.getElementById("dropdown");
+  for (var i = 0; i < majorScales.length; i++) {
+    var key = majorScales[i];
+    console.log(key);
+    var el = document.createElement("a");
+    el.textContent = (key.value)[0] + " major";
+    el.value = (key.value)[0] + " major";
+    el.className = "dropdown-item";
+    dropdown.appendChild(el);
     }
 }, false);
