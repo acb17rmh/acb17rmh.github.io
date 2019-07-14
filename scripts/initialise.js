@@ -2,93 +2,93 @@
    this script must always be loaded before other scripts to ensure those scripts
    have access to the data in this file */
 
-var DiatonicMajorChords = [
+var majorScales = [
   {
       "key": "C",
-      "value": ["C", "Dm", "Em", "F", "G", "Am", "Bdim"]
+      "value": ["C", "D", "E", "F", "G", "A", "B"]
   },
   {
       "key": "G",
-      "value": ["G", "Am", "Bm", "C", "D", "Em", "F#dim"]
+      "value": ["G", "A", "B", "C", "D", "E", "F#"]
   },
   {
       "key": "D",
-      "value": ["D", "Em", "F#m", "G", "A", "Bm", "C#dim"]
+      "value": ["D", "E", "F#", "G", "A", "B", "C#"]
   },
   {
       "key": "A",
-      "value": ["A", "Bm", "C#m", "D", "E", "F#m", "G#dim"]
+      "value": ["A", "B", "C#", "D", "E", "F#", "G#"]
   },
   {
       "key": "E",
-      "value": ["E", "F#m", "G#m", "A", "B", "C#m", "D#dim"]
+      "value": ["E", "F#", "G#", "A", "B", "C#", "D#"]
   },
   {
       "key": "B",
-      "value": ["B", "C#m", "D#m", "E", "F#", "G#m", "A#dim"]
+      "value": ["B", "C#", "D#", "E", "F#", "G#", "A#"]
   },
   {
       "key": "F#",
-      "value": ["F#", "G#m", "A#m", "B", "C#", "D#m", "E#dim"]
+      "value": ["F#", "G#", "A#", "B", "C#", "D#", "E#"]
   },
   {
       "key": "C#",
-      "value": ["C#", "D#m", "E#m", "F#", "G#", "A#m", "B#dim"]
+      "value": ["C#", "D#", "E#", "F#", "G#", "A#", "B#"]
   },
   {
       "key": "F",
-      "value": ["F", "Gm", "Am", "B♭", "C", "D", "Edim"]
+      "value": ["F", "G", "A", "B♭", "C", "D", "E"]
   },
   {
       "key": "B♭",
-      "value": ["B♭", "Cm", "Dm", "E♭", "F", "G", "Adim"]
+      "value": ["B♭", "C", "D", "E♭", "F", "G", "A"]
   },
   {
       "key": "E♭",
-      "value": ["E♭", "Fm", "Gm", "A♭", "B♭", "Cm", "Ddim"]
+      "value": ["E♭", "F", "G", "A♭", "B♭", "C", "D"]
   },
   {
       "key": "A♭",
-      "value": ["A♭", "B♭m", "Cm", "D♭", "E♭", "Fm", "Gdim"]
+      "value": ["A♭", "B♭", "C", "D♭", "E♭", "F", "G"]
   },
   {
       "key": "D♭",
-      "value": ["D♭", "E♭m", "Fm", "G♭", "A♭", "B♭m", "Cdim"]
+      "value": ["D♭", "E♭", "F", "G♭", "A♭", "B♭", "C"]
   },
   {
       "key": "G♭",
-      "value": ["G♭", "A♭m", "B♭m", "C♭", "D♭", "E♭m", "Fdim"]
+      "value": ["G♭", "A♭", "B♭", "C♭", "D♭", "E♭", "F"]
   },
   {
       "key": "C♭",
-      "value": ["C♭", "D♭m", "E♭m", "F♭", "G♭", "A♭m", "Bdim"]
+      "value": ["C♭", "D♭", "E♭", "F♭", "G♭", "A♭", "B"]
   },
 ];
 
-var DiatonicMinorChords = [
+var minorScales = [
   {
-      "key": "A minor",
-      "value": ["Am", "Bdim", "Caug", "D", "E", "F", "G#dim"]
+      "key": "A",
+      "value": ["A", "B", "Caug", "D", "E", "F", "G#"]
   },
   {
-      "key": "E minor",
-      "value": ["Em", "F#dim", "Gaug", "Am", "B", "C", "D#dim"]
+      "key": "E",
+      "value": ["E", "F#", "Gaug", "A", "B", "C", "D#"]
   },
   {
-      "key": "B minor",
-      "value": ["Bm", "C#dim", "Daug", "Em", "F#", "G", "A#dim"]
+      "key": "B",
+      "value": ["B", "C#", "Daug", "E", "F#", "G", "A#"]
   },
   {
-      "key": "F# minor",
-      "value": ["F#m", "G#dim", "Aaug", "Bm", "C#", "D", "E#dim"]
+      "key": "F",
+      "value": ["F#", "G#", "Aaug", "B", "C#", "D", "E#"]
   },
   {
-      "key": "C# minor",
-      "value": ["C#m", "D#dim", "Eaug", "F#m", "G#", "A", "B#dim"]
+      "key": "C",
+      "value": ["C#", "D#", "Eaug", "F#", "G#", "A", "B#"]
   },
   {
-      "key": "G# minor",
-      "value": ["G#m", "A#dim", "Baug", "C#m", "D#", "E", "F#dim"]
+      "key": "G",
+      "value": ["G#", "A#", "Baug", "C#", "D#", "E", "F#"]
   },
 
 ];
