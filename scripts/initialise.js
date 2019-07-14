@@ -100,7 +100,39 @@ var majorChordProgressions = [
                         [6, 4, 1, 5],
                         [3, 5, 4, 3],
                         [2, 5, 1],
+                        [1, 5, 6, 3, 4, 1, 4, 5],
+                        [1, 6, 3, 7],
+                        [1, 6, 4, 5],
+                        [1, 3, 4, 5],
+                        [1, 4, 3, 6],
+                        [1, 1, 4, 6],
+                        [2, 5, 1, 4],
+                        [1, 4],
+                        [1, 5],
+                        [1, 4, 5],
+                        [1, 5, 2, 7],
+                        [1, 4, 5, 5],
                         ];
+
+/* implementation of the Fisher-Yates shuffle algorithm
+   as seen here https://bost.ocks.org/mike/shuffle/ */
+function shuffle(array) {
+  var m = array.length, t, i;
+
+  // While there remain elements to shuffle…
+  while (m) {
+
+  // Pick a remaining element…
+  i = Math.floor(Math.random() * m--);
+
+  // And swap it with the current element.
+  t = array[m];
+  array[m] = array[i];
+  array[i] = t;
+}
+
+return array;
+}
 
 function getChordsFromScale(scale) {
   var chords = [];

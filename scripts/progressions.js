@@ -16,6 +16,7 @@ document.addEventListener('DOMContentLoaded', function() {
         $("#tbody").empty();
         var tbody = document.getElementById('tbody');
         var asArray = (this.value).split(",");
+        majorChordProgressions = (shuffle(majorChordProgressions));
         for (var i = 0; i < majorChordProgressions.length; i++) {
           var tr = "<tr>"
           var output = convertProgToChords(majorChordProgressions[i], getChordsFromScale(asArray));
@@ -24,17 +25,4 @@ document.addEventListener('DOMContentLoaded', function() {
           tbody.innerHTML += tr;
           }
     });
-}, false);
-
-
-/* loops through the chord progressions specified in the file
-   initialise.js and outputs them in the given key in an HTML table */
-document.addEventListener('DOMContentLoaded', function() {
-  var tbody = document.getElementById('tbody');
-  for (var i = 0; i < majorChordProgressions.length; i++) {
-    var tr = "<tr>"
-    var output = convertProgToChords(majorChordProgressions[i], cMajor)
-    tr += "<td>" + cMajor[0] + "<td>" + "<td>" + output.join(", ") + "</td><tr>";
-    tbody.innerHTML += tr;
-    }
 }, false);
