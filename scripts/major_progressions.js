@@ -16,10 +16,10 @@ document.addEventListener('DOMContentLoaded', function() {
         $("#tbody").empty();
         var tbody = document.getElementById('tbody');
         var asArray = (this.value).split(",");
-        majorChordProgressions = (shuffle(majorChordProgressions));
+        majorChordProgressions = (shuffle(chordProgressions));
         for (var i = 0; i < majorChordProgressions.length; i++) {
           var tr = "<tr>"
-          var output = convertProgToChords(majorChordProgressions[i], getChordsFromScale(asArray));
+          var output = convertProgToChords(chordProgressions[i], getChordsFromScale(asArray, true));
           console.log(output);
           tr += "<td>" + asArray[0] + "</td>" + "<td>" + output.join(", ") + "</td></tr>";
           tbody.innerHTML += tr;

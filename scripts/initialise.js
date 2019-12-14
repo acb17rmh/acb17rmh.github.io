@@ -68,32 +68,32 @@ var majorScales = [
 var minorScales = [
   {
       "key": "A",
-      "value": ["A", "B", "Caug", "D", "E", "F", "G#"]
+      "value": ["A", "B", "C", "D", "E", "F", "G#"]
   },
   {
       "key": "E",
-      "value": ["E", "F#", "Gaug", "A", "B", "C", "D#"]
+      "value": ["E", "F#", "G", "A", "B", "C", "D#"]
   },
   {
       "key": "B",
-      "value": ["B", "C#", "Daug", "E", "F#", "G", "A#"]
+      "value": ["B", "C#", "D", "E", "F#", "G", "A#"]
   },
   {
       "key": "F",
-      "value": ["F#", "G#", "Aaug", "B", "C#", "D", "E#"]
+      "value": ["F#", "G#", "A", "B", "C#", "D", "E#"]
   },
   {
       "key": "C",
-      "value": ["C#", "D#", "Eaug", "F#", "G#", "A", "B#"]
+      "value": ["C#", "D#", "E", "F#", "G#", "A", "B#"]
   },
   {
       "key": "G",
-      "value": ["G#", "A#", "Baug", "C#", "D#", "E", "F#"]
+      "value": ["G#", "A#", "B", "C#", "D#", "E", "F#"]
   },
 
 ];
 
-var majorChordProgressions = [
+var chordProgressions = [
                         [1, 5, 4, 6],
                         [5, 6, 4, 1],
                         [4, 1, 5, 6],
@@ -113,6 +113,7 @@ var majorChordProgressions = [
                         [1, 5, 2, 7],
                         [1, 4, 5, 5],
                         ];
+
 
 /* implementation of the Fisher-Yates shuffle algorithm
    as seen here https://bost.ocks.org/mike/shuffle/ */
@@ -134,24 +135,43 @@ function shuffle(array) {
 return array;
 }
 
-function getChordsFromScale(scale) {
+function getChordsFromScale(scale, isMajor) {
   var chords = [];
-  for (var j = 1; j <= scale.length; j++) {
-    var chord = "";
-    if ((j == 2) || (j == 3) || (j == 6)) {
-      //minor chord
-      chord = scale[j-1] + "m";
-      chords.push(chord);
-    } else if (j == 7) {
-      //diminished chord
-      chord = scale[j-1] + "dim";
-      chords.push(chord);
-    } else {
-      //major chord
-      chord = scale[j-1];
-      chords.push(chord);
+  if (isMajor) {
+    for (var j = 1; j <= scale.length; j++) {
+      var chord = "";
+      if ((j == 2) || (j == 3) || (j == 6)) {
+        //minor chord
+        chord = scale[j-1] + "m";
+        chords.push(chord);
+      } else if (j == 7) {
+        //diminished chord
+        chord = scale[j-1] + "dim";
+        chords.push(chord);
+      } else {
+        //major chord
+        chord = scale[j-1];
+        chords.push(chord);
+      }
     }
-  }
+  } else {
+        for (var j = 1; j <= scale.length; j++) {
+          var chord = "";
+          if ((j == 1) || (j == 4) || (j == 5)) {
+            //minor chord
+            chord = scale[j-1] + "m";
+            chords.push(chord);
+          } else if (j == 2) {
+            //augmented chord
+            chord = scale[j-1] + "aug";
+            chords.push(chord);
+          } else {
+            //major chord
+            chord = scale[j-1];
+            chords.push(chord);
+          }
+      }
+    }
   //console.log(chords);
   return chords;
 }
