@@ -68,29 +68,32 @@ var majorScales = [
 var minorScales = [
   {
       "key": "A",
-      "value": ["A", "B", "C", "D", "E", "F", "G#"]
+      "value": ["A", "B", "C", "D", "E", "F", "G"]
   },
   {
       "key": "E",
-      "value": ["E", "F#", "G", "A", "B", "C", "D#"]
+      "value": ["E", "F#", "G", "A", "B", "C", "D"]
   },
   {
       "key": "B",
-      "value": ["B", "C#", "D", "E", "F#", "G", "A#"]
+      "value": ["B", "C#", "D", "E", "F#", "G", "A"]
   },
   {
       "key": "F",
-      "value": ["F#", "G#", "A", "B", "C#", "D", "E#"]
+      "value": ["F#", "G#", "A", "B", "C#", "D", "E"]
   },
   {
       "key": "C",
-      "value": ["C#", "D#", "E", "F#", "G#", "A", "B#"]
+      "value": ["C#", "D#", "E", "F#", "G#", "A", "B"]
   },
   {
       "key": "G",
-      "value": ["G#", "A#", "B", "C#", "D#", "E", "F#"]
+      "value": ["G#", "A#", "B", "C#", "D#", "E", "F"]
   },
-
+  {
+      "key": "D",
+      "value": ["D", "E", "F", "G", "A", "B♭", "C"]
+  },
 ];
 
 var chordProgressions = [
