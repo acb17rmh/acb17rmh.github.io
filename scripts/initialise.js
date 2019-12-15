@@ -179,7 +179,6 @@ function getChordsFromScale(scale, isMajor) {
   return chords;
 }
 
-
 /* given a chord progression in number form, returns that progression
    in a given key
 
